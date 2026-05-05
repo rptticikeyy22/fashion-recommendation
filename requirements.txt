@@ -1,0 +1,19 @@
+# UI Framework
+streamlit
+
+# Deep Learning Core (PyTorch)
+torch
+torchvision
+
+# Models & Embeddings (Hugging Face / OpenAI CLIP)
+transformers
+
+# Vector Database
+faiss-cpu
+
+# LLM API (Google Gemini)
+google-generativeai
+
+# Image Processing & Array Manipulation
+Pillow
+numpy
