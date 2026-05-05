@@ -30,11 +30,10 @@ Hệ thống được xây dựng trên mô hình Micro-Architecture, bao gồm 
 
 ## 📂 Kho Dữ liệu (Dataset & Checkpoints)
 
-Theo yêu cầu của đồ án, toàn bộ dữ liệu, checkpoint và video demo đã được lưu trữ đầy đủ trên nền tảng đám mây[cite: 1]:
+Theo yêu cầu của đồ án, toàn bộ dữ liệu và checkpoint đã được lưu trữ đầy đủ trên nền tảng đám mây[cite: 1]:
 
-*   🤗 **Hugging Face Hub (Checkpoints):** [Chèn link Hugging Face chứa file fashion_clip.index và image_paths.npy][cite: 1]
-*   🗂️ **Google Drive (Full Backup):** [Chèn link thư mục Google Drive chứa Dataset + Checkpoint][cite: 1]
-*   🎬 **Video Demo:** [Chèn link YouTube hoặc Drive video demo 3-5 phút][cite: 1]
+*   🤗 **Hugging Face Hub (Checkpoints):** [https://huggingface.co/rptticikeyy22/fashion-clip-faiss](https://huggingface.co/rptticikeyy22/fashion-clip-faiss) (Chứa file `fashion_clip.index` và `image_paths.npy`)
+*   🤗 **Hugging Face Hub (Dataset):** [https://huggingface.co/datasets/rptticikeyy22/fashion-dataset-hd](https://huggingface.co/datasets/rptticikeyy22/fashion-dataset-hd) (Chứa tập dữ liệu hình ảnh `images_hd.zip`)
 
 ---
 
@@ -42,24 +41,22 @@ Theo yêu cầu của đồ án, toàn bộ dữ liệu, checkpoint và video de
 
 ### Bước 1: Clone dự án
 ```bash
-git clone [https://github.com/rptticikeyy22/](https://github.com/rptticikeyy22/)[ten-repo-cua-ban].git
-cd [ten-repo-cua-ban]
+git clone [https://github.com/rptticikeyy22/fashion-recommendation.git](https://github.com/rptticikeyy22/fashion-recommendation.git)
+cd fashion-recommendation
 ```
-*(Lưu ý: Bạn hãy thay thế `[ten-repo-cua-ban]` bằng tên chính xác của kho lưu trữ bạn vừa tạo trên GitHub).*
 
 ### Bước 2: Cài đặt môi trường
 Đảm bảo bạn đang sử dụng Python 3.9 trở lên. Cài đặt các thư viện cần thiết thông qua file `requirements.txt`:
 ```bash
 pip install -r requirements.txt
 ```
-*(Lưu ý: Hệ thống yêu cầu thư viện `torch` và `torchvision` để chạy mô hình CLIP).*
 
-### Bước 3: Tải dữ liệu Checkpoints
-Để chạy được ứng dụng, bạn cần tải lõi Vector Database:
-1. Truy cập vào link Hugging Face ở mục trên.
-2. Tải 2 tệp: `fashion_clip.index` và `image_paths.npy`.
-3. Đặt 2 tệp này vào **thư mục gốc** của dự án.
-4. Tải thư mục ảnh `images_hd` (chứa dữ liệu hình ảnh sản phẩm) và đặt vào thư mục gốc.
+### Bước 3: Tải dữ liệu Checkpoints & Dataset
+Để chạy được ứng dụng, bạn cần tải lõi Vector Database và hình ảnh:
+1. Truy cập vào link Hugging Face (Checkpoints) ở mục trên.
+2. Tải 2 tệp: `fashion_clip.index` và `image_paths.npy`. Đặt 2 tệp này vào **thư mục gốc** của dự án.
+3. Truy cập vào link Hugging Face (Dataset) ở mục trên.
+4. Tải file nén `images_hd.zip`, giải nén ra thành thư mục `images_hd` và đặt vào thư mục gốc.
 
 ### Bước 4: Khởi chạy ứng dụng
 Chạy lệnh sau trong Terminal (hoặc Command Prompt):
